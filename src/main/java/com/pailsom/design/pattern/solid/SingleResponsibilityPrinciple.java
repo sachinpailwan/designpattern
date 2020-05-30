@@ -2,6 +2,7 @@ package com.pailsom.design.pattern.solid;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 public class SingleResponsibilityPrinciple {
     public static void main(String[] args) {
@@ -29,7 +30,8 @@ public class SingleResponsibilityPrinciple {
 
     @Data
     @Builder
-    class Employee {
+    @ToString
+    static class Employee {
         private int empNo;
         private String empName;
         private double salary;
@@ -44,7 +46,8 @@ public class SingleResponsibilityPrinciple {
 
     @Data
     @Builder
-    class EmailContent {
+    @ToString
+    static class EmailContent {
         private String type;
         private String content;
 
@@ -56,6 +59,7 @@ public class SingleResponsibilityPrinciple {
 
         public boolean sendEmail(Employee toEmployee, EmailContent content) {
             // logic to send mail
+            System.out.println("Sending email to Employee :"+toEmployee+" with email content :"+content);
             return true;
         }
     }
