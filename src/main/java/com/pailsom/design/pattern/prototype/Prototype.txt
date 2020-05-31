@@ -1,0 +1,8 @@
+Proto Type :
+Complicate objects aren't designed from scratch.
+They reiterate existing objects.
+Copy the prototype and customize it.
+Requires 'deep copy'
+cloning convient through
+
+Summary :
